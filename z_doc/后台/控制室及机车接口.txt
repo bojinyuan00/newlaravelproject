@@ -1,0 +1,109 @@
+------------------------------------------------------------
+//调度室获取所有轨道线列表展示（调度室）
+api/dispatch/get_orbital_alllist
+get    
+return
+    {
+    "status": 0,
+    "msg": "获取成功",
+    "data": [
+        {
+            "id": 1,                                ==>轨道线id
+            "name": "一号线左线",                    ==》轨道名称
+            "enginering_id": 1,                     ==》轨道所属工程
+            "type": 1,                              ==》id轨道类型（1=左线;2=右线;3=单线）
+            "length": 100,                          ==》轨道线长度（单位：km）
+            "start_place": null,                    ==》起始里程位置（暂时无用）
+            "end_place": null,                      ==》终止里程位置（暂时无用）
+            "min_speed": 20,                        ==》建议列车运行最低速度
+            "max_speed": 40,                        ==》建议列车运行最低速度
+            "status": 1,                            ==》轨道状态(1=开通;2=未开通)
+            "created_at": "2019-01-25 18:14:06",    ==》创建时间
+            "updated_at": null                      ==》修改时间
+        },
+        {
+            "id": 2,
+            "name": "一号线右线",
+            "enginering_id": 1,
+            "type": 1,
+            "length": 110,
+            "start_place": null,
+            "end_place": null,
+            "min_speed": 20,
+            "max_speed": 40,
+            "status": 1,
+            "created_at": "2019-01-22 18:14:06",
+            "updated_at": null
+        }
+    ]
+}
+------------------------------------------------------------
+//机车氚度数据的上传操作接口（机车）
+api/dispatch/add_train_orbital_realtime
+post
+    {
+        train_id:1          ==》列车id
+        orbital_id:1        ==》轨道id
+        type:1              ==》数据上传类型
+        longitude:1.6.5     ==》上传经度
+        latitude:1.4.7      ==》上传纬度
+        mileage_id:1        ==》列车当前所处的里程id
+        mileage_length:20   ==》列车在当前里程上的行使距离
+        speed:26            ==》列车当前的行使速度
+    }
+return{
+    {
+    "status": 0,                    ==》上传成功状态码
+    "msg": "机车实时数据上传成功"     ==》提示信息
+}
+}
+------------------------------------------------------------
+调控室机车实时运行轨道线及位置的数据展示==》用来制作轨道信息链图（调度室）
+api/dispatch/get_traininfo_realyx
+get
+    {
+        "id": 4,   ==>选中传值过来的轨道线id
+    }
+return{
+    {
+    "status": 0,                                    ==》状态码
+    "msg": "某一轨道列车实时运行数据获取成功",         ==》提示信息
+    "data": [   
+        {
+            "id": 1,                                ==》轨道线id
+            "name": "一号线左线",                    ==》轨道线名称
+            "enginering_id": 1,                     ==》轨道所属工程id
+            "type": 1,                              ==》轨道类型（1=左线;2=右线;3=单线）
+            "length": 100,                          ==》轨道线长度
+            "start_place": null,                    ==》轨道线起始里程位置（暂时无用）
+            "end_place": null,                      ==》轨道线起始里程位置（暂时无用）
+            "min_speed": 20,                        ==》轨道线限制最低速度
+            "max_speed": 40,                        ==》轨道线限制最高速度
+            "status": 1,                            ==》轨道状态(1=开通;2=未开通)
+            "created_at": "2019-01-25 18:14:06",    ==》创建时间
+            "updated_at": null,                     ==》修改时间
+            "b_train_id": 1,                        ==》机车id
+            "b_type": 1,                            ==》机车信息的上传类型
+            "b_longitude": "1.6.5",                 ==》上传经度
+            "b_latitude": "1.4.7",                  ==》上传纬度
+            "b_mileage_id": 1,                      ==》所处的里程位置id
+            "b_mileage_length": 20,                 ==》在该里程上的运行距离
+            "b_orbital_length": null,               ==》在轨道上的运行距离
+            "b_speed": 26,                          ==》当前行使速度
+            "b_updated_at": "2019-01-26 10:15:05",  ==》上传修改时间
+            "c_name": "里程1",                      ==》里程名称
+            "c_type": 1,                            ==》里程类型（1:正常;2:短链;3:长链）
+            "c_offset": 0,                          ==》里程的偏移量
+            "c_plan_length": null,                  ==》里程的计划长度
+            "c_real_length": null,                  ==》里程的实际长度
+            "c_longitude": null,                    ==》里程所处经度
+            "c_latitude": null,                     ==》里程所处纬度
+            "c_min_speed": 20,                      ==》里程限制最低速
+            "c_max_speed": 40                       ==》里程限制最低速
+        }
+    ]
+}
+}
+------------------------------------------------------------
+
+------------------------------------------------------------
