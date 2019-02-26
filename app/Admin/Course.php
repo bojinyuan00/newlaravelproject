@@ -11,6 +11,6 @@ class Course extends Model
 
     //课程关联专业（1V1）
     public function profession(){
-    	return $this->hasOne('APP\Admin\Profession','id','profession_id');
+    	return $this->hasOne('App\Admin\Profession','id','profession_id');
     }
 }
