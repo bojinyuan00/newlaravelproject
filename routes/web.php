@@ -61,4 +61,10 @@ Route::group(['prefix'=>'admin','middleware'=>['auth:admin','checkrbac']],functi
 	Route::get('profession/index','Admin\ProfessionController@index');//专业列表
 
 
+	//课程与点播课程的路由管理
+	Route::get('course/index','Admin\CourseController@index');//课程列表
+	Route::get('lesson/index','Admin\LessonController@index');//点播列表
+	Route::get('lesson/play','Admin\LessonController@play');//视频列表
+
+
 });
