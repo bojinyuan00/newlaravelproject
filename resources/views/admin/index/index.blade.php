@@ -81,13 +81,16 @@
 			</dt>
 			<dd>
 				<ul>
-					<li><a data-href="/admin/profession/index" data-title="专业列表" href="javascript:void(0)">专业列表</a></li>
 					<li><a data-href="/admin/protype/index" data-title="专业分类" href="javascript:void(0)">专业分类</a></li>
+					<li><a data-href="/admin/profession/index" data-title="专业列表" href="javascript:void(0)">专业列表</a></li>
+					<li><a data-href="/admin/course/index" data-title="课程列表" href="javascript:void(0)">课程列表</a></li>
+					<li><a data-href="/admin/lesson/index" data-title="点播列表" href="javascript:void(0)">点播列表</a></li>
+					<li><a data-href="/admin/lesson/play" data-title="视频列表" href="javascript:void(0)">视频列表</a></li>
 				</ul>
 			</dd>
 	</dl>
 		<dl id="menu-picture">
-			<dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe613;</i> 课程管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
 					<li><a data-href="picture-list.html" data-title="图片管理" href="javascript:void(0)">图片管理</a></li>
