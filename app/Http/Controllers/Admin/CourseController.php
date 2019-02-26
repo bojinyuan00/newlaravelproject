@@ -4,15 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use APP\Admin\Course;
+use App\Admin\Course;
 
-class Course extends Controller
+class CourseController extends Controller
 {
     //课程列表
     public function index(){
-
     	//获取数据
-    	$data=Course::orderBy('sort','desc')->get();
+    	$data=Course::get();
     	//展示视图
     	return view('admin.course.index',compact('data'));
     }

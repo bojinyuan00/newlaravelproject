@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Profession extends Model
 {
     //定义关联的表
-    protected $table='profession';
+    public $table='profession';
 
 
      //定义关联操作
