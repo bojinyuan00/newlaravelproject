@@ -24,8 +24,6 @@ class LessonController extends Controller
     	$addr=Lesson::where('id',$id)->value('video_addr');
     	// dd($video_addr);
     	//播放视频
-    	return "<video src=\"$addr\" controls='controls'>您的浏览器不支持 video 标签。</video>";
-    
-    	
+    	return "<video src=\"$addr\" controls='controls' height=95% width=98%>您的浏览器不支持 video 标签。</video>";
     }
 }
