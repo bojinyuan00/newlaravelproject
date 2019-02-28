@@ -171,6 +171,8 @@ return [
         Mews\Captcha\CaptchaServiceProvider::class,//验证码配置项
          //七牛云存储配置
         zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+        //phpexcel
+        Maatwebsite\Excel\ExcelServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -233,6 +235,7 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,//debug工具条
         'Captcha' => Mews\Captcha\Facades\Captcha::class,//验证码配置别名
         'Input' => Illuminate\Support\Facades\Input::class,//input设置别名
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,//laravelexcel别名
 
     ],
 

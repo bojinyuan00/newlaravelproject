@@ -66,5 +66,13 @@ Route::group(['prefix'=>'admin','middleware'=>['auth:admin','checkrbac']],functi
 	Route::get('lesson/index','Admin\LessonController@index');//点播列表
 	Route::get('lesson/play','Admin\LessonController@play');//视频列表
 
+	//试卷、试题的列表
+	Route::get('paper/index','Admin\PaperController@index');//试卷列表
+	Route::get('question/index','Admin\QuestionController@index');//试题列表
+	Route::get('question/export','Admin\QuestionController@export');//试题导出
+	Route::any('question/import','Admin\QuestionController@import');//试题导入
+
+
+
 
 });
