@@ -83,9 +83,6 @@
 				<ul>
 					<li><a data-href="/admin/protype/index" data-title="专业分类" href="javascript:void(0)">专业分类</a></li>
 					<li><a data-href="/admin/profession/index" data-title="专业列表" href="javascript:void(0)">专业列表</a></li>
-					<li><a data-href="/admin/course/index" data-title="课程列表" href="javascript:void(0)">课程列表</a></li>
-					<li><a data-href="/admin/lesson/index" data-title="点播列表" href="javascript:void(0)">点播列表</a></li>
-					<li><a data-href="/admin/lesson/play" data-title="视频列表" href="javascript:void(0)">视频列表</a></li>
 				</ul>
 			</dd>
 	</dl>
@@ -93,17 +90,18 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 课程管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="picture-list.html" data-title="图片管理" href="javascript:void(0)">图片管理</a></li>
-			</ul>
+					<li><a data-href="/admin/course/index" data-title="课程列表" href="javascript:void(0)">课程列表</a></li>
+					<li><a data-href="/admin/lesson/index" data-title="点播列表" href="javascript:void(0)">点播列表</a></li>
+					<li><a data-href="/admin/lesson/play" data-title="视频列表" href="javascript:void(0)">视频列表</a></li>
+				</ul>
 		</dd>
 	</dl>
 		<dl id="menu-product">
-			<dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe720;</i> 试卷管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="product-brand.html" data-title="品牌管理" href="javascript:void(0)">品牌管理</a></li>
-					<li><a data-href="product-category.html" data-title="分类管理" href="javascript:void(0)">分类管理</a></li>
-					<li><a data-href="product-list.html" data-title="产品管理" href="javascript:void(0)">产品管理</a></li>
+					<li><a data-href="/admin/paper/index" data-title="试卷列表" href="javascript:void(0)">试卷列表</a></li>
+					<li><a data-href="/admin/question/index" data-title="试题管理" href="javascript:void(0)">试题管理</a></li>
 			</ul>
 		</dd>
 	</dl>
