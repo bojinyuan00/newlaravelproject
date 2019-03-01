@@ -34,7 +34,7 @@
 		<span class="l">
 			<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
 			<a href="javascript:;" onclick="admin_permission_add('添加试题节点','/admin/auth/add','','400')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加试题节点</a>
-			<a href="javascript:;" onclick="excel_import('导入','/admin/auth/import','','400')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe645;</i> 导入试题</a>
+			<a href="javascript:;" onclick="excel_import('导入','/admin/question/import','','400')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe645;</i> 导入试题</a>
 			<a href="javascript:;" onclick="location.href='/admin/question/export'" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe644;</i> 导出试题</a>
 
 		</span> <span class="r">共有数据：<strong>54</strong> 条</span> 
@@ -127,6 +127,12 @@ function play_options(options){
 function admin_permission_add(title,url,w,h){
 	layer_show(title,url,w,h);
 }
+/*管理员-试题-导入*/
+function excel_import(title,url,w,h){
+	layer_show(title,url,w,h);
+}
+
+
 /*管理员-试题-编辑*/
 function admin_permission_edit(title,url,id,w,h){
 	layer_show(title,url,w,h);
