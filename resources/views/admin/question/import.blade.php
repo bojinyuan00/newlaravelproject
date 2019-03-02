@@ -95,7 +95,7 @@
 <script type="text/javascript" src="/admin/lib/jquery.validation/1.14.0/messages_zh.js"></script>
 <!--引入webuploader需要的JS-->
 <script type="text/javascript" src="/statics/webuploader-0.1.5/webuploader.js"></script>
-<script type="text/javascript" src="/statics/excel.js"></script>
+<script type="text/javascript" src="/statics/excell.js"></script>
 <script type="text/javascript">
 $(function(){
 
