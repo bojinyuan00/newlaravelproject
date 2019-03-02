@@ -56,13 +56,13 @@ class QuestionController extends Controller
    		//判断请求的类型
    		if(Input::method()=='POST'){
    			//数据的导入操作
-   			$filePath = 'storage\app\public'. . Input::get('excelpath');//文件的路径
-   			// dd(Input::get());
-		    Excel::load('storage\app]\public\8edb0e1e9e6f718fe8dfdf11ca98da7d07967b57.xlsx', function($reader) {//加载读取
+   			$filePath = '.'. Input::get('excelpath');//文件的路径
+   			// dd($filePath);
+		    Excel::load($filePath, function($reader) {//加载读取
 		        // $data = $reader->all();//这个方法是获取所有的表
 		        $data = $reader -> getSheet(0) -> ToArray();
-		        echo '<pre>';
-		        var_dump($data);die;
+		        // echo '<pre>';
+		        // var_dump($data);die;
 		        //先读取全部的数据
 		        $temp=[];
 		        foreach ($data as $key => $value) {
@@ -83,7 +83,6 @@ class QuestionController extends Controller
 		        //写入数据
 		        // echo '<pre>';
 		        // var_dump($data);
-		        // 
 		        $result = Question::insert($temp);
    				echo $result ? '1' : '0';  
 		    });   					

@@ -20,7 +20,7 @@ jQuery(function() {
         // swf文件路径(修改swf文件的真实路径)
         swf: '/statics/webuploader-0.1.5/Uploader.swf',
         // // 文件接收本地存储服务端。
-        server: '/admin/uploader/webuploaderfile',//本地存储
+        server: '/admin/uploader/webuploader',//本地存储
         // 文件接收七牛服务端。
         // server: '/admin/uploader/qiniu',//云存储
 
