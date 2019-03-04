@@ -15,8 +15,8 @@ class Live extends Model
     }
 
     //关联直播  一对一
-    public function profession(){
-    	return $this->hasOne('App\Admin\Profession','id','profession_id');
+    public function stream(){
+    	return $this->hasOne('App\Admin\Stream','id','stream_id');
     }
 
 }
