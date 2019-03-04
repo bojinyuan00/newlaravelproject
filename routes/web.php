@@ -73,6 +73,12 @@ Route::group(['prefix'=>'admin','middleware'=>['auth:admin','checkrbac']],functi
 	Route::any('question/import','Admin\QuestionController@import');//试题导入
 
 
+	//直播课程
+	Route::get('live/index','Admin\LiveController@index');//直播课程列表
+	Route::get('stream/index','Admin\StreamController@index');//直播流列表
+	Route::any('stream/add','Admin\StreamController@add');//直播流的添加
+
+
 
 
 });
