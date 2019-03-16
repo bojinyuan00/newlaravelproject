@@ -4507,3 +4507,22 @@ Stack trace:
 #54 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #55 C:\study\newlaravelproject\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #56 {main}  
+[2019-03-16 15:32:28] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '}', expecting ',' or ')' in C:\study\newlaravelproject\database\migrations\2019_03_02_174001_add_machine_type_to_abbm.php:32
+Stack trace:
+#0 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(446): Illuminate\Filesystem\Filesystem->requireOnce('C:\\study\\newlar...')
+#1 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(89): Illuminate\Database\Migrations\Migrator->requireFiles(Array)
+#2 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(69): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#4 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#6 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#7 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Container\Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#8 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Console\Command.php(182): Illuminate\Container\Container->call(Array)
+#9 C:\study\newlaravelproject\vendor\symfony\console\Command\Command.php(255): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Console\Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 C:\study\newlaravelproject\vendor\symfony\console\Application.php(953): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\study\newlaravelproject\vendor\symfony\console\Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\study\newlaravelproject\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\study\newlaravelproject\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\study\newlaravelproject\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 {main}  
