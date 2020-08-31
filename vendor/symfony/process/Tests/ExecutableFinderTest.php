@@ -88,7 +88,7 @@ class ExecutableFinderTest extends TestCase
 
         $this->setPath('');
 
-        $extraDirs = array(\dirname(PHP_BINARY));
+        $extraDirs = [\dirname(PHP_BINARY)];
 
         $finder = new ExecutableFinder();
         $result = $finder->find($this->getPhpBinaryName(), null, $extraDirs);
@@ -132,9 +132,6 @@ class ExecutableFinderTest extends TestCase
         $this->assertSamePath(PHP_BINARY, $result);
     }
 
-    /**
-     * @requires PHP 5.4
-     */
     public function testFindBatchExecutableOnWindows()
     {
         if (ini_get('open_basedir')) {
